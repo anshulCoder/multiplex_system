@@ -1,0 +1,18 @@
+<div class='form-row pb-3'>
+  <div class="col">
+    <%= f.text_field :code, placeholder: "Seat Code", class: 'form-control', required:true%>
+  </div>
+  <div class="col">
+    <%= f.text_field :seat_type, placeholder: "Seat Type", class: 'form-control', required:true%>
+  </div>
+  <div class="col">
+    <%= f.number_field :cost, placeholder: "Price", class: 'form-control', required:true%>
+  </div>
+  <%= f.hidden_field :_destroy unless new_record %>
+
+  <div class='remove_fields_btn' style="<%= "display:none;" if new_record %>">
+    <%= link_to 'javascript:void(0)', onClick: "removeScreensFields(this)", class: "btn btn-outline-danger" do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </div>
+</div>

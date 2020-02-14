@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.2.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -46,3 +46,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Elasticsearch gem
+gem 'elasticsearch-rails',  '6.0'
+gem 'elasticsearch-model', '6.0'
+gem 'elasticsearch-persistence', '6.0'
+gem 'elasticsearch-api', '6.0'
+gem 'dry-struct', '~> 1.0'
+
+gem 'bootstrap', '~> 4.3.1'
+
+gem 'kaminari'

@@ -1,0 +1,6 @@
+<% fields = f.fields_for(:seats, Seat.new, child_index: "new_screens") do |builder|%>
+  <%= render 'seats_fields', f: builder, new_record: true %> 
+<% end%>
+<%= link_to 'javascript:void(0)', onClick: "addScreenFields('#{escape_javascript(fields)}')", class: "btn btn-outline-success" do %>
+  <i class="fa fa-plus"></i>
+<% end %>

@@ -1,0 +1,40 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'Dashboard', root_path %></li>
+    <li class="breadcrumb-item"><%= link_to 'Screen Management', screens_path %></li>
+    <li class="breadcrumb-item active" aria-current="page">Screen Details</li>
+  </ol>
+</nav>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <div class='row'>
+      <div class="media p-3 col-lg-10 col-md-10">
+        <div class="media-body align-self-center ml15">
+          <h5><%= @screen.name %></h5>
+        </div>
+      </div>
+      <div class='mt10 mb5 col-lg-2 col-md-2 align-self-center'>
+        <%= link_to 'Edit Screen', edit_screen_path, class: 'btn btn-danger mr-1' %>
+      </div>
+    </div>
+    <table class="table main-table table-bordered" id="screens-list">
+      <thead>
+        <tr>
+          <th class="pl20">Seat ID</th>
+          <th>Code</th>
+          <th>Type</th>
+          <th>Cost</th>
+          <th class="last-row">Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render 'seats' %>
+      </tbody>
+    </table>
+    <div class="pagination-content">
+      <%= paginate @seats, remote: true %>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>

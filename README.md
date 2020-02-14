@@ -1,24 +1,21 @@
-# README
+Multiplex system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version: ruby 2.6.3
+Rails: 5.2.2.1
+Elastic search: v6.0.1
 
-Things you may want to cover:
+First-Time Setup:
+	1) Modify the database.yml file with local postgresql credentials: config/database.yml
+	2) Run bundle install to install all the gems
+	3) Install Elasticsearch v6.0.1 in local and run in background
+	4) Run ruby db:setup to create and seed the database
+	5) For Setting up movie catalogue: 
+		a) Open rails console using cmd 'rails c'
+		b) Run following cmds:
+			s = SetupMovieCatalogue.new
+			s.call
+	6) Now access the app at 'http://localhost:3000'.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Handling updates:
+	Run bundle install
+	Run rails db:migrate

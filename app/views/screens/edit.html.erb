@@ -1,0 +1,15 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'Screen Management', screens_path %></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Screen</li>
+  </ol>
+</nav>
+<br>
+<div class="sub-content">
+  <% if flash[:alert].present? %>
+    <div class="alert alert-danger"><%= flash[:alert] %></div>
+  <% end %>
+  <div class="m20">
+    <%= render 'form' %>
+  </div>
+</div>

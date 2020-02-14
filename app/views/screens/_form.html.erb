@@ -1,0 +1,7 @@
+<div class="sub-content">
+  <div class="m20">
+    <%= form_for @screen, url: @screen.persisted? ? screen_path(@screen) : screens_path do |f| %>
+      <%= render partial: "screen_fields", locals: { f: f } %>
+    <% end %>
+  </div>
+</div>

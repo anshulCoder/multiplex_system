@@ -1,0 +1,22 @@
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">User Details</h5>
+		<div class="form-group">
+			<label for="user_email">Email:</label>
+			<%= email_field_tag :user_email, '', class: 'form-control', onkeypress:"return event.keyCode != 13;" %> 
+		</div>
+		<div class="form-group">
+			<label for="user_phone_number">Phone Number:</label>
+			<%= number_field_tag :user_phone_number, '', class: 'form-control', onkeypress: "return event.keyCode != 13;" %> 
+		</div>
+		<%= link_to 'javascript:void(0)', onClick: "validateUser('#{verify_user_path}')", class: "btn btn-outline-success validate-user-btn" do %>
+		  Signup/Signin
+		<% end %>
+		<div class="form-group referral-wrapper d-none">
+			<label for="user_referral">Referral Email:</label>
+			<%= email_field_tag :user_referral, '', class: 'form-control', onChange: "validateReferral('#{validate_referral_path}');" %> 
+			<small id="referral-result" class="form-text text-muted"></small>
+		</div>
+		<%= submit_tag "Book Tickets", class: "btn btn-success booking-btn d-none" %>
+	</div>
+</div>

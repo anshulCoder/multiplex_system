@@ -1,0 +1,14 @@
+<% if @multiplexes.present? %>
+  <% @multiplexes.each do |multiplex| %>
+    <tr onclick="window.location.href='<%= multiplex_path(multiplex) %>'" class="pointer">
+      <td><%= multiplex.id %></td>
+      <td><%= multiplex.name %></td>
+      <td><%= multiplex.screens.length %></td>
+      <td><%= multiplex.created_at.strftime("%d-%m-%Y %I:%M %p") %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <tr>
+    <td colspan='4'>No Records Found</td>
+  </tr>
+<% end %>

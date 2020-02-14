@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  seat_type: MyString
+  cost: 1.5
+  is_available: false
+
+two:
+  code: MyString
+  seat_type: MyString
+  cost: 1.5
+  is_available: false

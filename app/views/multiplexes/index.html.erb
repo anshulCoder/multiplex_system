@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <ol class="breadcrumb m-0" style="background-color:transparent;">
+    <li class="breadcrumb-item"><%= link_to 'Dashboard', root_path %></li>
+    <li class="breadcrumb-item active" aria-current="page">Multiplex Management</li>
+  </ol>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <div class=" my-2 my-lg-0">
+      <%= link_to 'Add Multiplex', new_multiplex_path, class: 'btn btn-outline-primary my-2 my-sm-0' %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <% if flash[:notice].present? %>
+    <div class="alert alert-success"><%= flash[:notice] %></div>
+  <% end %>
+  <div class="multiplex-count-txt mt15 dinblock">
+    Showing <%= @multiplexes.total_count %> Multiplexes
+  </div>
+  <table class="table table-bordered" id="multiplex-list">
+    <thead>
+      <tr>
+        <th class="pl20">ID</th>
+        <th>Name</th>
+        <th>Screens Count</th>
+        <th class="last-row">Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render "multiplexes" %>
+    </tbody>
+  </table>
+  <div class="pagination-content">
+    <%= paginate @multiplexes, remote: true %>
+  </div>
+</div>

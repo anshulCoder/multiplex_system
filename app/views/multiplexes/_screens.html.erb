@@ -1,0 +1,14 @@
+<% if @screens.present? %>
+  <% @screens.each do |screen| %>
+    <tr onclick="window.location.href='<%= screen_path(screen) %>'" class="pointer">
+      <td><%= screen.id %></td>
+      <td><%= screen.name %></td>
+      <td><%= screen.screen_type %></td>
+      <td><%= screen.created_at.strftime("%d-%m-%Y %I:%M %p") %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <tr>
+    <td colspan='4'>No Records Found</td>
+  </tr>
+<% end %>

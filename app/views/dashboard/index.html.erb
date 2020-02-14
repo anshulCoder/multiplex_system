@@ -1,0 +1,40 @@
+<html>
+	<head><title>Multiple Management System</title></head>
+	<body>
+		<div class="container">
+			<br>
+			<h2 class="text-center">Admin Dashboard</h2>
+			<br>
+			<div class="cards-wrapper d-flex justify-content-center">
+				<div class="card text-center">
+				  <div class="card-body">
+				    <h5 class="card-title m-0">Manage Multiplexes</h5>
+				    <%= link_to " ", multiplexes_path, class: "stretched-link" %>
+				  </div>
+				</div>
+
+				<div class="card ml-2 text-center">
+				  <div class="card-body">
+				    <h5 class="card-title m-0">Manage Screens</h5>
+				    <%= link_to " ", screens_path, class: "stretched-link" %>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<div class="container mt-4">
+			<br>
+			<h2 class="text-center">User Section</h2>
+			<br>
+			<div class="cards-wrapper d-flex justify-content-center">
+				<div class="card text-center">
+				  <div class="card-body">
+				    <h5 class="card-title m-0">Movie Booking</h5>
+				    <%= link_to " ", movie_bookings_path, class: "stretched-link" %>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

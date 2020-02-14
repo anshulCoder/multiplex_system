@@ -1,0 +1,18 @@
+<% if @movies.present? %>
+	<ul class="list-unstyled">
+	  <% @movies.each do |movie| %>
+  		<li class="media">
+  			<i class="fa fa-film fa-4x mr-3"></i>
+  			<div class="media-body mb-4">
+  				<h5 class="mt-0 mb-1"><%= movie["name"] %></h5>
+  				<strong>Rating:</strong> <%= movie["rating"] %><br>
+  				<strong>Release Date:</strong> <%= Date.parse(movie["release_date"]).strftime("%d-%m-%Y") %>
+          <br>
+  			</div>
+        <%= link_to 'Book', proceed_booking_path(movie["id"]), class: 'btn btn-primary btn-sm ml-3' %>
+  		</li>
+	  <% end %>
+	</ul>
+<% else %>
+	<h5>No Movies Found</h5>
+<% end %>

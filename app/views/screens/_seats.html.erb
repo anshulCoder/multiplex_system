@@ -1,0 +1,15 @@
+<% if @seats.present? %>
+  <% @seats.each do |seat| %>
+    <tr>
+      <td><%= seat.id %></td>
+      <td><%= seat.code %></td>
+      <td><%= seat.seat_type %></td>
+      <td><%= seat.cost %></td>
+      <td><%= seat.created_at.strftime("%d-%m-%Y %I:%M %p") %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <tr>
+    <td colspan='5'>No Records Found</td>
+  </tr>
+<% end %>

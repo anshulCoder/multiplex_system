@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+@import "font-awesome.min";
+
+.pointer {
+	cursor: pointer;
+}
+
+label input {
+	display: none;
+}
+label {
+	cursor: pointer;
+}
+input:checked ~ span {
+	background-color: #000 !important;
+}

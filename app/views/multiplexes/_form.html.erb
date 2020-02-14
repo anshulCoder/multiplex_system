@@ -1,0 +1,7 @@
+<div class="sub-content">
+  <div class="m20">
+    <%= form_for @multiplex, url: @multiplex.persisted? ? multiplex_path(@multiplex) : multiplexes_path do |f| %>
+      <%= render partial: "multiplex_fields", locals: { f: f } %>
+    <% end %>
+  </div>
+</div>
